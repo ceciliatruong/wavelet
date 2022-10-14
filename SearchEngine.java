@@ -11,7 +11,6 @@ class Handler implements URLHandler {
             if(parameters[0].equals("s")) {
                 for(int i = 0; i < list.size(); i++) {
                     if(list.get(i).contains(parameters[1]) == true) {
-                        System.out.println(list.get(i));
                         finalSearch.add(list.get(i));
                     }
                 }
