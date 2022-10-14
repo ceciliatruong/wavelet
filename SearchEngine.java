@@ -7,6 +7,9 @@ class Handler implements URLHandler {
     ArrayList<String> finalSearch = new ArrayList<String>();
     public String handleRequest(URI url) {
         if (url.getPath().contains("/search")) {
+            if(finalSearch.size() > 0) {
+                finalSearch.removeAll(finalSearch);
+            }
             String[] parameters = url.getQuery().split("=");
             if(parameters[0].equals("s")) {
                 for(int i = 0; i < list.size(); i++) {
