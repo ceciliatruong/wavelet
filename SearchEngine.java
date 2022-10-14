@@ -15,7 +15,7 @@ class Handler implements URLHandler {
                         finalSearch.add(newList[i]);
                     }
                 }
-                if(finalSearch.size() == 0) {
+                if(finalSearch.size() <= 0) {
                     return("No matches in the search engine found");
                 }
                 else {
