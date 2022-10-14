@@ -1,7 +1,7 @@
 import java.io.IOException;
 import java.net.URI;
 import java.util.ArrayList;
-
+// note that this code doesn't account for case-sensitive entries
 class Handler implements URLHandler {
     ArrayList<String> list = new ArrayList<String>();
     ArrayList<String> finalSearch = new ArrayList<String>();
