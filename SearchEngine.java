@@ -1,7 +1,6 @@
 import java.io.IOException;
 import java.net.URI;
 import java.util.LinkedList;
-import java.util.ArrayList;
 
 class Handler implements URLHandler {
     LinkedList<String> list = new LinkedList<String>();
@@ -17,7 +16,7 @@ class Handler implements URLHandler {
                     }
                 }
                 if(finalSearch.size() == 0) {
-                    System.out.println("No matches in the search engine found");
+                    return("No matches in the search engine found");
                 }
                 else {
                     String finalList = finalSearch.toString();
@@ -30,12 +29,11 @@ class Handler implements URLHandler {
             String[] parameters = url.getQuery().split("=");
             if (parameters[0].equals("s")) {
                 list.add(parameters[1]);
-                System.out.println("String has been successfully entered into the search engine!");
+                return("String has been successfully entered into the search engine!");
                 }
-            }
-        return "testing";     
-        }  
-
+            }   
+        return "testing";  
+    }
 }
 
 
