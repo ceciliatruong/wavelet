@@ -1,8 +1,9 @@
 import java.io.IOException;
 import java.net.URI;
 import java.util.LinkedList;
+import java.util.ArrayList;
 
-public class SearchEngine implements URLHandler {
+class Handler implements URLHandler {
     LinkedList<String> list = new LinkedList<String>();
     LinkedList<String> finalSearch = new LinkedList<String>();
     public String handleRequest(URI url) {
@@ -32,11 +33,13 @@ public class SearchEngine implements URLHandler {
                 System.out.println("String has been successfully entered into the search engine!");
                 }
             }
-        return null;     
+        return "testing";     
         }  
-    
+
 }
-class SlaySearchEngine {
+
+
+class SearchEngine {
     public static void main(String[] args) throws IOException {
         if(args.length == 0){
             System.out.println("Missing port number! Try any number between 1024 to 49151");
