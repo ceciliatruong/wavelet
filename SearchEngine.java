@@ -32,7 +32,7 @@ class Handler implements URLHandler {
                 return("String has been successfully entered into the search engine!");
                 }
             }   
-        return "testing";  
+        return "welcome to cc's search engine!!!";  
     }
 }
 
